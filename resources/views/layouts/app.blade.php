@@ -17,6 +17,10 @@
         <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <!-- Argon CSS -->
         <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
+
+        <!-- datatables -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <link type="text/css" href="{{ asset('argon') }}/css/customDatatablesCss.css" rel="stylesheet">
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
