@@ -15,7 +15,13 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            //clé étrangère venant de la table demande_preinscription
+            $table->unsignedBigInteger('preinscription_id')->unique();
+            $table->foreign('preinscription_id')->references('id')->on('demande_inscription');
+            $table->string('prenom');
+            $table->string('nom');
+            $table->boolean('etat_incription')->default(null);
+            $table->string('profil');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
