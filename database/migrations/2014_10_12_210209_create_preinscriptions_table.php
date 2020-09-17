@@ -17,7 +17,7 @@ class CreatePreinscriptionsTable extends Migration
             $table->id();
             $table->string('prenom');
             $table->string('nom');
-            $table->string('civilité');
+            $table->string('civilite');
             $table->string('email');
             $table->string('cne');
             $table->string('cin');

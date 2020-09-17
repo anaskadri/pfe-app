@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             //clé étrangère venant de la table demande_preinscription
             $table->unsignedBigInteger('preinscription_id')->unique();
-            $table->foreign('preinscription_id')->references('id')->on('demande_inscription');
+            $table->foreign('preinscription_id')->references('id')->on('preinscriptions');
             $table->string('prenom');
             $table->string('nom');
             $table->boolean('etat_incription')->default(null);
