@@ -82,6 +82,9 @@
                     <a class="nav-link" href="{{ route('home') }}">
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
+                    <a class="nav-link" href="{{ route('liste_preinscription') }}">
+                        <i class="ni ni-tv-2 text-primary"></i> {{ __('pre_inscription') }}
+                    </a>
                 </li>
             </ul>
             <!-- Divider -->

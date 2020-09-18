@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
     <div class="container-fluid">
         <div class="header-body table-responsive">
@@ -78,3 +82,9 @@
 } );
 </script>
 @endpush
+    
+    <div class="container-fluid mt--7 pr-0 pl-0">
+        
+        @include('layouts.footers.auth')
+    </div>
+@endsection
