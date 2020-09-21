@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             //clé étrangère venant de la table demande_preinscription
-            $table->unsignedBigInteger('preinscription_id')->unique();
+            $table->unsignedBigInteger('preinscription_id')->unique()->nullable();
             $table->foreign('preinscription_id')->references('id')->on('preinscriptions');
             $table->string('prenom');
             $table->string('nom');
