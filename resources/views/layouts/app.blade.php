@@ -20,7 +20,7 @@
 
         <!-- datatables -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-        <link type="text/css" href="{{ asset('argon') }}/css/customDatatablesCss.css" rel="stylesheet">
+        <link type="text/css" href="{{ asset('argon') }}/vendor/bootstrap-datatables/css/datatables-buttons.min.css" rel="stylesheet">
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
