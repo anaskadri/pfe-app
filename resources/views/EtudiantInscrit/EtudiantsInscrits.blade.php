@@ -22,7 +22,7 @@
                         <th>file CIN</th>
                         <th>file BAC</th>
                         <th>file DIPLOME</th>
-                        <th>Validation</th>
+                        <th>Supprimer</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,9 +57,10 @@
                             </button>
                         </td>
                         <td class="td-actions text-right">
-                            <label class="custom-toggle">
-                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
-                                <span class="custom-toggle-slider rounded-circle"></span>
+                            <label class="">
+                                
+                                <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-danger">Supprimer</button>
+                                <span class=""></span>
                             </label>
 
                             <!-- Modal -->
