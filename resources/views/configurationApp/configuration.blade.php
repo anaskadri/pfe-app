@@ -28,7 +28,7 @@
                                             <div class="modal-body">
                                                 <form>
                                                     <div class="form-group">
-                                                        <label for="example-text-input" class="form-control-label">Text</label>
+                                                        <label for="example-text-input" class="form-control-label"></label>
                                                         <input class="form-control" type="text" value="John Snow" id="example-text-input">
                                                     </div>
                                                 </form>
