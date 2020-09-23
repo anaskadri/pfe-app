@@ -15,7 +15,8 @@ class CreateHorairesTable extends Migration
     {
         Schema::create('horaires', function (Blueprint $table) {
             $table->id();
-            $table->string('libelle_horaire');
+            $table->time('heure_debut');
+            $table->time('heure_fin');
             $table->timestamps();
         });
     }

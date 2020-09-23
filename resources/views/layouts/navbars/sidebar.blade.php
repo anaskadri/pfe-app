@@ -88,6 +88,12 @@
                     <a class="nav-link" href="{{ route('etudiantsInscrits') }}">
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('etudiantsInscrits') }}
                     </a>
+                    <a class="nav-link" href="{{ route('configuration') }}">
+                        <i class="ni ni-tv-2 text-primary"></i> {{ __('configuration') }}
+                    </a>
+                    <a class="nav-link" href="{{ route('absences') }}">
+                        <i class="ni ni-tv-2 text-primary"></i> {{ __('absences') }}
+                    </a>
                 </li>
             </ul>
             <!-- Divider -->
