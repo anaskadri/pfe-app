@@ -25,6 +25,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/liste_preinscription', 'PreinscriptionController@index')->name('liste_preinscription');
+Route::get('/liste_preinscription/{id}','PreinscriptionController@creation_compte')->name('creation_compte');
 Route::get('/etudiantsInscrits', 'EtudiantsInscritsController@index')->name('etudiantsInscrits');
 Route::get('/configuration', 'configurationController@index')->name('configuration');
 Route::get('/absences', 'absencesController@index')->name('absences');
