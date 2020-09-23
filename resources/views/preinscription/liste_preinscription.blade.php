@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="header-body table-responsive">
             <!-- Card stats -->
-            <table id="table" class="table">
+            <table id="table" class="table table_preinscription">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -27,7 +27,717 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
+                        <td>2</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Mr</td>
+                        <td>Anas</td>
+                        <td>Kadri</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Mr</td>
+                        <td>Taha</td>
+                        <td>Khalil</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>rabat</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>5</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>10</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>13</td>
+                        <td>Mr</td>
+                        <td>Zernoun</td>
+                        <td>Mohssine</td>
+                        <td>test@gmail.com</td>
+                        <td>0928321</td>
+                        <td>KZDQSLDKQS</td>
+                        <td>QSKDJQS</td>
+                        <td>Kenitra</td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> cv
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> CIN
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> BAC
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                                <i class="ni ni-active-40"></i> Diplome
+                            </button>
+                        </td>
+                        <td class="td-actions text-right">
+                            <label class="custom-toggle">
+                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
+                                <span class="custom-toggle-slider rounded-circle"></span>
+                            </label>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>14</td>
                         <td>Mr</td>
                         <td>Zernoun</td>
                         <td>Mohssine</td>
