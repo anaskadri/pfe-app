@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="header-body table-responsive">
             <!-- Card stats -->
-            <table id="table" class="table">
+            <table id="table" class="table table_preinscription">
                 <thead>
                     <tr>
                         <th>ID</th>
