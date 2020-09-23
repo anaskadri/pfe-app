@@ -26,64 +26,73 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($presincriptions as $preinscription)
                     <tr>
-                        <td>1</td>
-                        <td>Mr</td>
-                        <td>Zernoun</td>
-                        <td>Mohssine</td>
-                        <td>test@gmail.com</td>
-                        <td>0928321</td>
-                        <td>KZDQSLDKQS</td>
-                        <td>QSKDJQS</td>
-                        <td>Kenitra</td>
+                        <td>{{ $preinscription->id }}</td>
+                        <td>{{ $preinscription->civilite }}</td>
+                        <td>{{ $preinscription->nom }}</td>
+                        <td>{{ $preinscription->prenom }}</td>
+                        <td>{{ $preinscription->email }}</td>
+                        <td>{{ $preinscription->telephone }}</td>
+                        <td>{{ $preinscription->cne }}</td>
+                        <td>{{ $preinscription->cin }}</td>
+                        <td>{{ $preinscription->ville }}</td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{$preinscription->file_cv}}" download>
                                 <i class="ni ni-active-40"></i> cv
-                            </button>
+                            </a>
                         </td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{ $preinscription->file_cin}}" download>
                                 <i class="ni ni-active-40"></i> CIN
-                            </button>
+                            </a>
                         </td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{ $preinscription->file_bac}}" download>
                                 <i class="ni ni-active-40"></i> BAC
-                            </button>
+                            </a>
                         </td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{ $preinscription->file_diplome}}" download>
                                 <i class="ni ni-active-40"></i> Diplome
-                            </button>
+                            </a>
                         </td>
                         <td class="td-actions text-right">
-                            <label class="custom-toggle">
-                                <input data-toggle="modal" data-target="#exampleModal" type="checkbox" checked>
-                                <span class="custom-toggle-slider rounded-circle"></span>
-                            </label>
-
+                            {{--@if($etat_inscription === 1 )--}}
+                                <label class="custom-toggle">
+                                    <input data-toggle="modal" data-target="#exampleModal{{ $preinscription->id }}" type="checkbox" checked>
+                                    <span class="custom-toggle-slider rounded-circle"></span>
+                                </label>
+                        {{--  @else
+                          <label class="custom-toggle">
+                              <input data-toggle="modal" data-target="#exampleModal" type="checkbox"  checked>
+                              <span class="custom-toggle-slider rounded-circle"></span>
+                          </label>
+                      @endif
+                      --}}
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                <div class="modal fade" id="exampleModal{{ $preinscription->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">SURE ?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ...
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                                        <a class="btn btn-primary" href="{{ route('creation_compte',['id' => $preinscription->id]) }}">Save changes</a>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                    ...
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
-                                </div>
-                            </div>
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

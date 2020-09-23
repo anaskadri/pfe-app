@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->foreign('preinscription_id')->references('id')->on('preinscriptions');
             $table->string('prenom');
             $table->string('nom');
-            $table->boolean('etat_incription');
+            $table->boolean('etat_inscription');
             $table->string('profil')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
