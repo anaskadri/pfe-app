@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     public function preinscription()
     {
-        return $this->hasMany('App\Preinscription');
+        return $this->belongsTo('App\Preinscription');
     }
 }

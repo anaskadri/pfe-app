@@ -10,7 +10,6 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Civilité</th>
                         <th>Nom</th>
                         <th>prenom</th>
                         <th>email</th>
@@ -26,45 +25,45 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($users as $user)
+                    @if($user->etat_inscription === 1)
                     <tr>
-                        <td>1</td>
-                        <td>Mr</td>
-                        <td>Zernoun</td>
-                        <td>Mohssine</td>
-                        <td>test@gmail.com</td>
-                        <td>0928321</td>
-                        <td>KZDQSLDKQS</td>
-                        <td>QSKDJQS</td>
-                        <td>Kenitra</td>
+                        <td>{{$user->id}}</td>
+                        <td>{{$user->nom}}</td>
+                        <td>{{$user->prenom}}</td>
+                        <td>{{$user->email}}</td>
+                        <td>{{$user->preinscription->telephone}}</td>
+                        <td>{{$user->preinscription->cne}}</td>
+                        <td>{{$user->preinscription->cin}}</td>
+                        <td>{{$user->preinscription->ville}}</td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{$user->preinscription->file_cv}}" download>
                                 <i class="ni ni-active-40"></i> cv
-                            </button>
+                            </a>
                         </td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{ $user->preinscription->file_cin}}" download>
                                 <i class="ni ni-active-40"></i> CIN
-                            </button>
+                            </a>
                         </td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{ $user->preinscription->file_bac}}" download>
                                 <i class="ni ni-active-40"></i> BAC
-                            </button>
+                            </a>
                         </td>
                         <td>
-                            <button class="btn btn-primary btn-fab btn-icon btn-round">
+                            <a class="btn btn-primary btn-fab btn-icon btn-round" href="http://localhost/pfe-siteweb/Storage/{{ $user->preinscription->file_diplome}}" download>
                                 <i class="ni ni-active-40"></i> Diplome
-                            </button>
+                            </a>
                         </td>
                         <td class="td-actions text-right">
                             <label class="">
-                                
-                                <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-danger">Supprimer</button>
+                                <button data-toggle="modal" data-target="#exampleModal{{$user->id}}" type="button" class="btn btn-danger">Supprimer</button>
                                 <span class=""></span>
                             </label>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -74,17 +73,18 @@
                                     </button>
                                     </div>
                                     <div class="modal-body">
-                                    ...
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <a type="button" href="{{route('delete_user', ['id'=>$user->id])}}" class="btn btn-primary">Save changes</a>
                                     </div>
                                 </div>
                                 </div>
                             </div>
                         </td>
                     </tr>
+                    @endif
+                    @endforeach
                 </tbody>
             </table>
         </div>

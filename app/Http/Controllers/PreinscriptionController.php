@@ -33,9 +33,7 @@ class PreinscriptionController extends Controller
     {
         //récupérer
         $utilisateur_preinscri = Preinscription::findOrFail($id);
-
         //création d'un compte utilisateur
-
         $user = User::create([
             'preinscription_id' => $id,
             'prenom' => $utilisateur_preinscri->prenom,
@@ -45,12 +43,7 @@ class PreinscriptionController extends Controller
             'email' => $utilisateur_preinscri->email,
             'password' => Hash::make(mt_rand())
             ]);
-//        $user->save();
-//        $users = User::all();
-//        $users = $users->last();
-//       $users->etat_inscription;
-        $preinscriptions = Preinscription::all();
-        return view('preinscription/liste_preinscription',['presincriptions' => $preinscriptions]);
+        return redirect()->route('liste_preinscription');
     }
 
 

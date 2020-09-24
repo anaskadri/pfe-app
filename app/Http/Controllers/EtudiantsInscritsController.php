@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Preinscription;
+use App\User;
+
 class EtudiantsInscritsController extends Controller
 {
     /**
@@ -19,6 +22,13 @@ class EtudiantsInscritsController extends Controller
      */
     public function index()
     {
-        return view('EtudiantInscrit/EtudiantsInscrits');
+        $users = User::with('preinscription')->get();
+//        dd($users);
+        return view('EtudiantInscrit/EtudiantsInscrits', ['users' => $users]);
+    }
+    public function delete_user($id)
+    {
+        User::destroy($id);
+        return redirect()->route('etudiantsInscrits');
     }
 }
