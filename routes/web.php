@@ -23,6 +23,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+//VIEW ETUDIANT
+Route::get('/etudiant', 'etudiantController@index')->name('etudiant');
+//VIEW ETUDIANT ABSENCES
+Route::get('/absencesViewEtudiant', 'absencesViewEtudiantController@index')->name('absencesViewEtudiant');
+
+//VIEW PROF
+Route::get('/prof', 'profController@index')->name('prof');
+//VIEW PROF ABSENCES
+Route::get('/absencesFormProf', 'absencesFormProfController@index')->name('absencesFormProf');
+Route::get('/absencesProf', 'absencesProfController@index')->name('absencesProf');
+
 Route::get('/liste_preinscription', 'PreinscriptionController@index')->name('liste_preinscription');
 Route::get('/liste_preinscription/{id}','PreinscriptionController@creation_compte')->name('creation_compte');
 Route::get('/etudiantsInscrits', 'EtudiantsInscritsController@index')->name('etudiantsInscrits');
