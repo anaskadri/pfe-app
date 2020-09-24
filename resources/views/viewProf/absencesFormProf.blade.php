@@ -27,6 +27,7 @@
                         <option>de 10h a 12h</option>
                       </select>
                     </div>
+                    <button type="button" class="btn btn-primary">Enregistrer</button>
                   </form>
                 </div>
               </div>
