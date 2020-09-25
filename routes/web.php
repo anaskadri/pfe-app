@@ -43,7 +43,11 @@ Route::get('/configuration/{id}', 'configurationController@delete')->name('delet
 Route::get('/configuration/{id}/delete', 'configurationController@delete_horaires')->name('delete_horaire');
 Route::post('/configuration', ['as' => 'configuration.store_modules', 'uses' => 'configurationController@store_modules']);
 Route::post('/configuration/horaire', ['as' => 'configuration.store_horaires', 'uses' => 'configurationController@store_horaires']);
+
+//absence Admin
 Route::get('/absences', 'absencesController@index')->name('absences');
+Route::get('/absences/delete/{id}', 'absencesController@delete_absence')->name('delete_absence');
+
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);

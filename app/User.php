@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Preinscription');
     }
+
+    public function absences()
+    {
+        return $this->hasMany('App\absences');
+    }
 }
