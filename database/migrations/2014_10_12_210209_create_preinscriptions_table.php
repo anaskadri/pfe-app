@@ -21,7 +21,7 @@ class CreatePreinscriptionsTable extends Migration
             $table->string('email');
             $table->string('cne');
             $table->string('cin');
-            $table->unsignedBigInteger('telephone');
+            $table->unsignedBigInteger('telephone')->nullable();
             $table->string('ville');
             $table->string('file_cv');
             $table->string('file_cin');

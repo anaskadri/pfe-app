@@ -192,6 +192,100 @@
                         </div>
                     </div>
                 </div>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="card shadow">
+                            <div class="card-header border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0">Professeur</h3>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal3">Ajouter Professeur</a>
+                                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un Professeur</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <form action="#" method="post">
+                                                        @csrf
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label for="example-text-input" class="form-control-label">Nom</label>
+                                                                <input class="form-control" type="text" name="nom_prof" value="" id="example-text-input">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="example-text-input" class="form-control-label">Prenom</label>
+                                                                <input class="form-control" type="text" name="prenom_prof" value="" id="example-text-input">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12"></div>
+
+                            <div class="table-responsive">
+                                <table class="table align-items-center table-flush">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Module</th>
+                                        <th scope="col">Supprimer</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($modules as $module)
+                                    <tr>
+                                        <td>{{$module->id}}</td>
+                                        <td>{{$module->libelle_module}}</td>
+                                        <td>
+                                            <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppressionModuleModal1{{$module->id}}">Supprimer</button>
+                                            <div class="modal fade" id="suppressionModuleModal1{{$module->id}}" tabindex="-1" role="dialog" aria-labelledby="suppressionModuleModal1" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">Supprimer ?</div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                                            <a href="#" type="button" class="btn btn-danger">Supprimer</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer py-4">
+                                <nav class="d-flex justify-content-end" aria-label="...">
+
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
