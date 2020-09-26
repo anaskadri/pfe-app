@@ -11,20 +11,28 @@
                   <form>
                     <div class="form-group">
                       <label for="example-text-input" class="form-control-label">Nom Prenom</label>
-                      <select class="form-control">
-                        <option>Default select</option>
+                      <select class="form-control" name="user">
+                        @foreach($users as $user)
+                            @if ($user->profil === "etudiant") 
+                                <option value="{{$user->id}}">{{$user->nom}} {{$user->prenom}}</option>
+                            @endif
+                        @endforeach
                       </select>
                     </div>
                     <div class="form-group">
                       <label for="example-search-input" class="form-control-label">Heure de la Seance</label>
-                      <select class="form-control">
-                        <option>de 10h a 12h</option>
+                      <select class="form-control" name="horaire">
+                            @foreach($horaires as $horaire)
+                                <option value="{{$horaire->id}}">de {{$horaire->heure_debut}} a {{$horaire->heure_fin}}</option>
+                            @endforeach
                       </select>
                     </div>
                     <div class="form-group">
                       <label for="example-email-input" class="form-control-label">Module</label>
-                      <select class="form-control">
-                        <option>de 10h a 12h</option>
+                      <select class="form-control" name="module">
+                        @foreach($modules as $module)
+                                <option value="{{$module->id}}">{{$module->libelle_module}}</option>
+                            @endforeach
                       </select>
                     </div>
                     <button type="button" class="btn btn-primary">Enregistrer</button>

@@ -17,7 +17,7 @@ class absencesFormProfController extends Controller
         $users = User::all();
         
         
-        return view('viewProf/absencesFormProf', ['absences' => $absences, 'modules' => $modules, 'users' => $users]);
+        return view('viewProf/absencesFormProf', ['horaires' => $horaires, 'modules' => $modules, 'users' => $users]);
         
     }
 }
