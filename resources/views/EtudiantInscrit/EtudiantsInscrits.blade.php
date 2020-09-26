@@ -25,6 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                 @foreach($users as $user)
                     @if($user->etat_inscription === 1)
                     <tr>

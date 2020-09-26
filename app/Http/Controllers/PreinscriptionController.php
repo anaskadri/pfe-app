@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderShipped;
 use App\Preinscription;
 use App\User;
 use http\Env\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
 
 class PreinscriptionController extends Controller
 {
@@ -31,8 +36,13 @@ class PreinscriptionController extends Controller
 
     public function creation_compte($id)
     {
-        //récupérer
+        //récupérer d'utilisateur préinscri
         $utilisateur_preinscri = Preinscription::findOrFail($id);
+        //envoi de mail
+        $email = $utilisateur_preinscri->email;
+        $password = mt_rand();
+        Mail::to("$email")->send(new OrderShipped());
+
         //création d'un compte utilisateur
         $user = User::create([
             'preinscription_id' => $id,
@@ -41,10 +51,11 @@ class PreinscriptionController extends Controller
             'profil' => 'etudiant',
             'etat_inscription' => true,
             'email' => $utilisateur_preinscri->email,
-            'password' => Hash::make(mt_rand())
+            'password' => Hash::make($password)
             ]);
         return redirect()->route('liste_preinscription');
     }
+
 
 
 }

@@ -24,12 +24,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //VIEW ETUDIANT
-Route::get('/etudiant', 'etudiantController@index')->name('etudiant');
+Route::get('/etudiant', 'etudiantController@index')->name('etudiant')->middleware('auth');
 //VIEW ETUDIANT ABSENCES
 Route::get('/absencesViewEtudiant', 'absencesViewEtudiantController@index')->name('absencesViewEtudiant');
 
 //VIEW PROF
-Route::get('/prof', 'profController@index')->name('prof');
+Route::get('/prof', 'profController@index')->name('prof')->middleware('auth');
 //VIEW PROF ABSENCES
 Route::get('/absencesFormProf', 'absencesFormProfController@index')->name('absencesFormProf');
 Route::get('/absencesProf', 'absencesProfController@index')->name('absencesProf');
@@ -41,8 +41,10 @@ Route::get('/etudiantsInscrits/{id}', 'EtudiantsInscritsController@delete_user')
 Route::get('/configuration', 'configurationController@index')->name('configuration');
 Route::get('/configuration/{id}', 'configurationController@delete')->name('delete');
 Route::get('/configuration/{id}/delete', 'configurationController@delete_horaires')->name('delete_horaire');
+Route::get('/configuration/{id}/delete/user', 'configurationController@delete_user')->name('delete_user');
 Route::post('/configuration', ['as' => 'configuration.store_modules', 'uses' => 'configurationController@store_modules']);
 Route::post('/configuration/horaire', ['as' => 'configuration.store_horaires', 'uses' => 'configurationController@store_horaires']);
+Route::post('/configuration/prof', ['as' => 'configuration.store_prof', 'uses' => 'configurationController@store_prof']);
 
 //absence Admin
 Route::get('/absences', 'absencesController@index')->name('absences');

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\horaires;
 use App\modules;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class configurationController extends Controller
 {
@@ -27,7 +29,8 @@ class configurationController extends Controller
     {
         $modules = modules::all();
         $horaires = horaires::all();
-        return view('configurationApp/configuration', ['modules' => $modules, 'horaires' => $horaires]);
+        $users = User::all()->where('profil','=',"prof");
+        return view('configurationApp/configuration', ['modules' => $modules, 'horaires' => $horaires,'users' => $users]);
     }
 
     public function store_modules(Request $request)
@@ -48,6 +51,26 @@ class configurationController extends Controller
         return redirect()->route('configuration');
     }
 
+    public function store_prof(Request $request)
+    {
+        $nom = $request->nom_prof;
+        $prenom = $request->prenom_prof;
+        $email = $request->email_prof;
+        $etat_inscription = false;
+        $password = "dawm1234";
+
+        $user = User::create([
+            'nom' => $nom,
+            'prenom' => $prenom,
+            'email' => $email,
+            'profil' => 'prof',
+            'etat_inscription' => $etat_inscription,
+            'password' => Hash::make($password),
+        ]);
+        $user->save();
+        return redirect()->route('configuration');
+    }
+
 
     public function delete($id)
     {
@@ -57,6 +80,11 @@ class configurationController extends Controller
     public function delete_horaires($id)
     {
         horaires::destroy($id);
+        return redirect()->route('configuration');
+    }
+    public function delete_user($id)
+    {
+        User::destroy($id);
         return redirect()->route('configuration');
     }
 }

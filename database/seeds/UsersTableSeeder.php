@@ -16,8 +16,19 @@ class UsersTableSeeder extends Seeder
             'nom' => 'Admin Admin',
             'prenom' => 'Admin Admin',
             'email' => 'admin@argon.com',
-            'etat_inscription' => true,
+            'etat_inscription' => false,
             'profil' => 'admin',
+            'email_verified_at' => now(),
+            'password' => Hash::make('secret'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        DB::table('users')->insert([
+            'nom' => 'prof',
+            'prenom' => 'prof',
+            'email' => 'anaskadri@gmail.com',
+            'etat_inscription' => false,
+            'profil' => 'prof',
             'email_verified_at' => now(),
             'password' => Hash::make('secret'),
             'created_at' => now(),

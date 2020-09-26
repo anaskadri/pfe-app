@@ -212,7 +212,7 @@
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
-                                                    <form action="#" method="post">
+                                                    <form action="{{route('configuration.store_prof')}}" method="post">
                                                         @csrf
                                                         <div class="modal-body">
                                                             <div class="form-group">
@@ -223,7 +223,10 @@
                                                                 <label for="example-text-input" class="form-control-label">Prenom</label>
                                                                 <input class="form-control" type="text" name="prenom_prof" value="" id="example-text-input">
                                                             </div>
-                                                            
+                                                            <div class="form-group">
+                                                                <label for="example-text-input" class="form-control-label">Email</label>
+                                                                <input class="form-control" type="email" name="email_prof" value="" id="example-text-input">
+                                                            </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -244,18 +247,20 @@
                                     <thead class="thead-light">
                                     <tr>
                                         <th scope="col">Id</th>
-                                        <th scope="col">Module</th>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Prenom</th>
                                         <th scope="col">Supprimer</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($modules as $module)
+                                    @foreach($users as $user)
                                     <tr>
-                                        <td>{{$module->id}}</td>
-                                        <td>{{$module->libelle_module}}</td>
+                                        <td>{{$user->id}}</td>
+                                        <td>{{$user->nom}}</td>
+                                        <td>{{$user->prenom}}</td>
                                         <td>
-                                            <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppressionModuleModal1{{$module->id}}">Supprimer</button>
-                                            <div class="modal fade" id="suppressionModuleModal1{{$module->id}}" tabindex="-1" role="dialog" aria-labelledby="suppressionModuleModal1" aria-hidden="true">
+                                            <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppressionModuleModal1{{$user->id}}">Supprimer</button>
+                                            <div class="modal fade" id="suppressionModuleModal1{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="suppressionModuleModal1" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -267,7 +272,7 @@
                                                         <div class="modal-body">Supprimer ?</div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                            <a href="#" type="button" class="btn btn-danger">Supprimer</a>
+                                                            <a href="{{route('delete_user',['id' => $user->id])}}" type="button" class="btn btn-danger">Supprimer</a>
                                                         </div>
                                                     </div>
                                                 </div>
