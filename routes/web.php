@@ -27,6 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/etudiant', 'etudiantController@index')->name('etudiant');
 //VIEW ETUDIANT ABSENCES
 Route::get('/absencesViewEtudiant', 'absencesViewEtudiantController@index')->name('absencesViewEtudiant');
+//DELETE ETUDIANT ABSENCES
+Route::get('/absencesViewEtudiant/delete/{id}', 'absencesViewEtudiantController@delete_absence_etudiant')->name('delete_absence_etudiant');
 
 //VIEW PROF
 Route::get('/prof', 'profController@index')->name('prof');

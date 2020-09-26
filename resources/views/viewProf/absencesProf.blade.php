@@ -17,13 +17,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($absences as $absence)
                     <tr>
-                        <td>1</td>
-                        <td>Kadri</td>
-                        <td>Zernoun</td>
-                        <td>de 9h a 12h</td>
-                        <td>Dev Web</td>
+                        <td>{{$absence->id}}</td>
+                        <td>{{$absence->user->nom}}</td>
+                        <td>{{$absence->user->prenom}} </td>
+                        <td>De {{$absence->horaire->heure_debut}} à {{$absence->horaire->heure_fin}}</td>
+                        <td>{{$absence->module->libelle_module}} </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

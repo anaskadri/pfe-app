@@ -59,9 +59,8 @@
                         </td>
                         <td class="td-actions text-right">
                             {{--@if($etat_inscription === 1 )--}}
-                                <label class="custom-toggle">
-                                    <input data-toggle="modal" data-target="#exampleModal{{ $preinscription->id }}" type="checkbox" checked>
-                                    <span class="custom-toggle-slider rounded-circle"></span>
+                                <label class="">
+                                    <input class="btn btn-primary btn-fab btn-icon btn-round" data-toggle="modal" data-target="#exampleModal{{ $preinscription->id }}" type="button" value="valider" checked>
                                 </label>
                         {{--  @else
                           <label class="custom-toggle">

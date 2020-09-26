@@ -194,7 +194,7 @@
                 </div>
                 <br/>
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-lg-7">
                         <div class="card shadow">
                             <div class="card-header border-0">
                                 <div class="row align-items-center">
@@ -244,7 +244,8 @@
                                     <thead class="thead-light">
                                     <tr>
                                         <th scope="col">Id</th>
-                                        <th scope="col">Module</th>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Prenom</th>
                                         <th scope="col">Supprimer</th>
                                     </tr>
                                     </thead>
@@ -253,6 +254,7 @@
                                     <tr>
                                         <td>{{$module->id}}</td>
                                         <td>{{$module->libelle_module}}</td>
+                                        <td>fff</td>
                                         <td>
                                             <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppressionModuleModal1{{$module->id}}">Supprimer</button>
                                             <div class="modal fade" id="suppressionModuleModal1{{$module->id}}" tabindex="-1" role="dialog" aria-labelledby="suppressionModuleModal1" aria-hidden="true">
