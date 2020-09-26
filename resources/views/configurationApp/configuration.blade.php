@@ -14,27 +14,37 @@
                                         <h3 class="mb-0">Modules</h3>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal1">Ajouter un module</a>
-                                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                        <a href="" class="btn btn-sm btn-primary" data-toggle="modal"
+                                           data-target="#exampleModal1">Ajouter un module</a>
+                                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+                                             aria-labelledby="exampleModalLabel1" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un Module</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un
+                                                            Module</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
-                                                    <form action="{{route('configuration.store_modules')}}" method="post">
+                                                    <form action="{{route('configuration.store_modules')}}"
+                                                          method="post">
                                                         @csrf
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label for="example-text-input" class="form-control-label">Module</label>
-                                                                <input class="form-control" type="text" name="module" value="John Snow" id="example-text-input">
+                                                                <label for="example-text-input"
+                                                                       class="form-control-label">Module</label>
+                                                                <input class="form-control" type="text" name="module"
+                                                                       value="John Snow" id="example-text-input">
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Fermer
+                                                            </button>
+                                                            <button type="submit" class="btn btn-primary">Enregistrer
+                                                            </button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -57,30 +67,38 @@
                                     </thead>
                                     <tbody>
                                     @foreach($modules as $module)
-                                    <tr>
-                                        <td>{{$module->id}}</td>
-                                        <td>{{$module->libelle_module}}</td>
-                                        <td>
-                                            <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppressionModuleModal1{{$module->id}}">Supprimer</button>
-                                            <div class="modal fade" id="suppressionModuleModal1{{$module->id}}" tabindex="-1" role="dialog" aria-labelledby="suppressionModuleModal1" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">Supprimer ?</div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                            <a href="{{route('delete',['id'=>$module->id])}}" type="button" class="btn btn-danger">Supprimer</a>
+                                        <tr>
+                                            <td>{{$module->id}}</td>
+                                            <td>{{$module->libelle_module}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                                        data-target="#suppressionModuleModal1{{$module->id}}">Supprimer
+                                                </button>
+                                                <div class="modal fade" id="suppressionModuleModal1{{$module->id}}"
+                                                     tabindex="-1" role="dialog"
+                                                     aria-labelledby="suppressionModuleModal1" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">Supprimer ?</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-dismiss="modal">Fermer
+                                                                </button>
+                                                                <a href="{{route('delete',['id'=>$module->id])}}"
+                                                                   type="button" class="btn btn-danger">Supprimer</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
                                     @endforeach
                                     </tbody>
                                 </table>
@@ -116,21 +134,32 @@
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
-                                                    <form action="{{route('configuration.store_horaires')}}" method="post">
+                                                    <form action="{{route('configuration.store_horaires')}}"
+                                                          method="post">
                                                         @csrf
                                                         <div class="modal-body">
-                                                                <div class="form-group">
-                                                                    <label for="example-time-input" class="form-control-label">Date Debut seance</label>
-                                                                    <input class="form-control" type="time" name="heure_debut" value="10:30:00" id="example-time-input">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="example-time-input" class="form-control-label">Date fin seance</label>
-                                                                    <input class="form-control" type="time" name="heure_fin" value="10:30:00" id="example-time-input">
-                                                                </div>
+                                                            <div class="form-group">
+                                                                <label for="example-time-input"
+                                                                       class="form-control-label">Date Debut
+                                                                    seance</label>
+                                                                <input class="form-control" type="time"
+                                                                       name="heure_debut" value="10:30:00"
+                                                                       id="example-time-input">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="example-time-input"
+                                                                       class="form-control-label">Date fin
+                                                                    seance</label>
+                                                                <input class="form-control" type="time" name="heure_fin"
+                                                                       value="10:30:00" id="example-time-input">
+                                                            </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Fermer
+                                                            </button>
+                                                            <button type="submit" class="btn btn-primary">Enregistrer
+                                                            </button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -152,35 +181,42 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                     @foreach($horaires as $horaire)
-                                            <tr>
-                                                <td>{{$horaire->id}}</td>
-                                                <td>De {{$horaire->heure_debut}} a {{$horaire->heure_fin}}</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppressionHoraireModal1">Supprimer
-                                                    </button>
+                                    @foreach($horaires as $horaire)
+                                        <tr>
+                                            <td>{{$horaire->id}}</td>
+                                            <td>De {{$horaire->heure_debut}} a {{$horaire->heure_fin}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                                        data-target="#suppressionHoraireModal1">Supprimer
+                                                </button>
 
-                                                    <div class="modal fade" id="suppressionHoraireModal1" tabindex="-1" role="dialog" aria-labelledby="suppressionHoraireModal1" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">Supprimer ?
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                                    <a href="{{route('delete_horaire',['id'=>$horaire->id])}}" type="button" class="btn btn-danger">Supprimer</a>
-                                                                </div>
+                                                <div class="modal fade" id="suppressionHoraireModal1" tabindex="-1"
+                                                     role="dialog" aria-labelledby="suppressionHoraireModal1"
+                                                     aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">Supprimer ?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-dismiss="modal">Fermer
+                                                                </button>
+                                                                <a href="{{route('delete_horaire',['id'=>$horaire->id])}}"
+                                                                   type="button" class="btn btn-danger">Supprimer</a>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </td>
-                                            </tr>
-                                         @endforeach
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -202,13 +238,17 @@
                                         <h3 class="mb-0">Professeur</h3>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal3">Ajouter Professeur</a>
-                                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                        <a href="" class="btn btn-sm btn-primary" data-toggle="modal"
+                                           data-target="#exampleModal3">Ajouter Professeur</a>
+                                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                                             aria-labelledby="exampleModalLabel1" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un Professeur</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un
+                                                            Professeur</h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
@@ -216,21 +256,32 @@
                                                         @csrf
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label for="example-text-input" class="form-control-label">Nom</label>
-                                                                <input class="form-control" type="text" name="nom_prof" value="" id="example-text-input">
+                                                                <label for="example-text-input"
+                                                                       class="form-control-label">Nom</label>
+                                                                <input class="form-control" type="text" name="nom_prof"
+                                                                       value="" id="example-text-input">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="example-text-input" class="form-control-label">Prenom</label>
-                                                                <input class="form-control" type="text" name="prenom_prof" value="" id="example-text-input">
+                                                                <label for="example-text-input"
+                                                                       class="form-control-label">Prenom</label>
+                                                                <input class="form-control" type="text"
+                                                                       name="prenom_prof" value=""
+                                                                       id="example-text-input">
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="example-text-input" class="form-control-label">Email</label>
-                                                                <input class="form-control" type="email" name="email_prof" value="" id="example-text-input">
+                                                                <label for="example-text-input"
+                                                                       class="form-control-label">Email</label>
+                                                                <input class="form-control" type="email"
+                                                                       name="email_prof" value=""
+                                                                       id="example-text-input">
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Fermer
+                                                            </button>
+                                                            <button type="submit" class="btn btn-primary">Enregistrer
+                                                            </button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -254,31 +305,39 @@
                                     </thead>
                                     <tbody>
                                     @foreach($users as $user)
-                                    <tr>
-                                        <td>{{$user->id}}</td>
-                                        <td>{{$user->nom}}</td>
-                                        <td>{{$user->prenom}}</td>
-                                        <td>
-                                            <button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppressionModuleModal1{{$user->id}}">Supprimer</button>
-                                            <div class="modal fade" id="suppressionModuleModal1{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="suppressionModuleModal1" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">Supprimer ?</div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                            <a href="{{route('delete_user',['id' => $user->id])}}" type="button" class="btn btn-danger">Supprimer</a>
+                                        <tr>
+                                            <td>{{$user->id}}</td>
+                                            <td>{{$user->nom}}</td>
+                                            <td>{{$user->prenom}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                                        data-target="#suppressionModuleModal1{{$user->id}}">Supprimer
+                                                </button>
+                                                <div class="modal fade" id="suppressionModuleModal1{{$user->id}}"
+                                                     tabindex="-1" role="dialog"
+                                                     aria-labelledby="suppressionModuleModal1" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">Supprimer ?</div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-dismiss="modal">Fermer
+                                                                </button>
+                                                                <a href="{{route('delete_user',['id' => $user->id])}}"
+                                                                   type="button" class="btn btn-danger">Supprimer</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
                                     @endforeach
                                     </tbody>
                                 </table>
